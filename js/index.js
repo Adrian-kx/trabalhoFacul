@@ -1,3 +1,4 @@
+// Efeito de Digitação
 const textElement = document.getElementById("title");
 const text = "Desenvolvedor Front-End";
 let index = 0;
@@ -11,3 +12,13 @@ function typeText() {
 }
 
 typeText();
+
+// Proibir o arrastar de imagem
+
+(function () {
+    function desativarDragDrop() {
+      document.addEventListener('dragstart', (evento) => evento.preventDefault(), false)
+      document.addEventListener('drop', (evento) => evento.preventDefault(), false)
+    }
+    desativarDragDrop()
+  }())
